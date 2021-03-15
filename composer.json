@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "setono/client-id-contracts": "^1.1",
+        "setono/client-id-contracts": "dev-master",
         "symfony/uid": "^5.2"
     },
     "provide": {

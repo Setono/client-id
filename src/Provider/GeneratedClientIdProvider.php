@@ -2,9 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Setono\ClientId;
+namespace Setono\ClientId\Provider;
 
-final class GeneratedClientId implements ClientIdInterface
+use Setono\ClientId\ClientId;
+use Setono\ClientId\ClientIdGeneratorInterface;
+use Setono\ClientId\ClientIdProviderInterface;
+
+final class GeneratedClientIdProvider implements ClientIdProviderInterface
 {
     private ClientIdGeneratorInterface $clientIdGenerator;
 
@@ -13,7 +17,7 @@ final class GeneratedClientId implements ClientIdInterface
         $this->clientIdGenerator = $clientIdGenerator;
     }
 
-    public function get(): string
+    public function get(): ClientId
     {
         return $this->clientIdGenerator->generate();
     }

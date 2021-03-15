@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Setono\ClientId\Generator;
 
 use PHPUnit\Framework\TestCase;
+use Setono\ClientId\ClientId;
 use Symfony\Component\Uid\Uuid;
 use Symfony\Component\Uid\UuidV4;
 
@@ -19,7 +20,7 @@ final class UuidClientIdGeneratorTest extends TestCase
     public function it_generates(): void
     {
         $generator = new UuidClientIdGenerator();
-        self::assertIsString($generator->generate());
+        self::assertInstanceOf(ClientId::class, $generator->generate());
     }
 
     /**
@@ -29,8 +30,8 @@ final class UuidClientIdGeneratorTest extends TestCase
     {
         $generator = new UuidClientIdGenerator();
 
-        $id1 = $generator->generate();
-        $id2 = $generator->generate();
+        $id1 = $generator->generate()->value();
+        $id2 = $generator->generate()->value();
 
         self::assertNotSame($id1, $id2);
     }
@@ -42,7 +43,7 @@ final class UuidClientIdGeneratorTest extends TestCase
     {
         $generator = new UuidClientIdGenerator();
 
-        $uuid = Uuid::fromString($generator->generate());
+        $uuid = Uuid::fromString($generator->generate()->value());
 
         self::assertInstanceOf(UuidV4::class, $uuid);
     }
