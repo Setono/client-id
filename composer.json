@@ -1,0 +1,49 @@
+{
+    "name": "setono/client-id",
+    "type": "library",
+    "description": "Implementation of the setono/client-id-contracts",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joachim Løvgaard",
+            "email": "joachim@loevgaard.dk"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "setono/client-id-contracts": "^1.1",
+        "symfony/uid": "^5.2"
+    },
+    "require-dev": {
+        "infection/infection": "^0.21.0",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.15.1",
+        "setono/code-quality-pack": "^2.0",
+        "symfony/http-foundation": "^4.4 || ^5.2"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Setono\\ClientId\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Setono\\ClientId\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "psalm",
+        "check-style": "ecs check",
+        "fix-style": "ecs check --fix",
+        "phpunit": "phpunit"
+    }
+}
