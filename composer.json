@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": ">=7.4",
         "setono/client-id-contracts": "^1.1",
         "symfony/uid": "^5.2"
     },
