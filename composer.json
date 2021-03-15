@@ -14,6 +14,9 @@
         "setono/client-id-contracts": "^1.1",
         "symfony/uid": "^5.2"
     },
+    "provide": {
+        "setono/client-id-implementation": "1.0"
+    },
     "require-dev": {
         "infection/infection": "^0.21.0",
         "phpunit/phpunit": "^9.5",
