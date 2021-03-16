@@ -6,7 +6,6 @@ namespace Setono\ClientId\Provider;
 
 use PHPUnit\Framework\TestCase;
 use Setono\ClientId\ClientId;
-use Setono\ClientId\ClientIdProviderInterface;
 use Setono\ClientId\Cookie\CookieReaderInterface;
 
 /**

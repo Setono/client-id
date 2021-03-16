@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace Setono\ClientId\Provider;
 
 use Setono\ClientId\ClientId;
-use Setono\ClientId\ClientIdGeneratorInterface;
-use Setono\ClientId\ClientIdProviderInterface;
+use Setono\ClientId\Generator\ClientIdGeneratorInterface;
 
 final class GeneratedClientIdProvider implements ClientIdProviderInterface
 {

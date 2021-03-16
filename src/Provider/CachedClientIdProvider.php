@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Setono\ClientId\Provider;
 
 use Setono\ClientId\ClientId;
-use Setono\ClientId\ClientIdProviderInterface;
 
 final class CachedClientIdProvider implements ClientIdProviderInterface
 {

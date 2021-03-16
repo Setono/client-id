@@ -6,7 +6,7 @@ namespace Setono\ClientId\Provider;
 
 use PHPUnit\Framework\TestCase;
 use Setono\ClientId\ClientId;
-use Setono\ClientId\ClientIdGeneratorInterface;
+use Setono\ClientId\Generator\ClientIdGeneratorInterface;
 
 /**
  * @covers \Setono\ClientId\Provider\GeneratedClientIdProvider
