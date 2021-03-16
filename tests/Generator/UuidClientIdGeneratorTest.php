@@ -30,8 +30,8 @@ final class UuidClientIdGeneratorTest extends TestCase
     {
         $generator = new UuidClientIdGenerator();
 
-        $id1 = $generator->generate()->value();
-        $id2 = $generator->generate()->value();
+        $id1 = $generator->generate()->toString();
+        $id2 = $generator->generate()->toString();
 
         self::assertNotSame($id1, $id2);
     }
@@ -43,7 +43,7 @@ final class UuidClientIdGeneratorTest extends TestCase
     {
         $generator = new UuidClientIdGenerator();
 
-        $uuid = Uuid::fromString($generator->generate()->value());
+        $uuid = Uuid::fromString($generator->generate()->toString());
 
         self::assertInstanceOf(UuidV4::class, $uuid);
     }

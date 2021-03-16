@@ -27,7 +27,7 @@ final class CookieBasedClientIdProviderTest extends TestCase
 
         $clientIdProvider = new CookieBasedClientIdProvider(self::getDecorated(), $cookieReader, 'cookie_name');
 
-        self::assertSame('cookie_value', $clientIdProvider->get()->value());
+        self::assertSame('cookie_value', $clientIdProvider->get()->toString());
     }
 
     private static function getDecorated(): ClientIdProviderInterface
