@@ -26,6 +26,6 @@ final class GeneratedClientIdProviderTest extends TestCase
         };
 
         $clientId = new GeneratedClientIdProvider($generator);
-        self::assertSame('client_id', $clientId->get()->toString());
+        self::assertSame('client_id', $clientId->getClientId()->toString());
     }
 }

@@ -22,10 +22,10 @@ final class CookieBasedClientIdProvider implements ClientIdProviderInterface
         $this->cookieName = $cookieName;
     }
 
-    public function get(): ClientId
+    public function getClientId(): ClientId
     {
         $value = $this->cookieReader->getValue($this->cookieName);
 
-        return $value ? new ClientId($value) : $this->decorated->get();
+        return $value ? new ClientId($value) : $this->decorated->getClientId();
     }
 }

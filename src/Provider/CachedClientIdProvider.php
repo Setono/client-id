@@ -17,10 +17,10 @@ final class CachedClientIdProvider implements ClientIdProviderInterface
         $this->decorated = $decorated;
     }
 
-    public function get(): ClientId
+    public function getClientId(): ClientId
     {
         if (null === $this->clientId) {
-            $this->clientId = $this->decorated->get();
+            $this->clientId = $this->decorated->getClientId();
         }
 
         return $this->clientId;

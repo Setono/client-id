@@ -18,14 +18,14 @@ final class CachedClientIdProviderTest extends TestCase
     public function it_caches_result(): void
     {
         $clientId = new CachedClientIdProvider(new class() implements ClientIdProviderInterface {
-            public function get(): ClientId
+            public function getClientId(): ClientId
             {
                 return new ClientId(random_bytes(10));
             }
         });
 
-        $result1 = $clientId->get();
-        $result2 = $clientId->get();
+        $result1 = $clientId->getClientId();
+        $result2 = $clientId->getClientId();
 
         self::assertSame($result1, $result2);
     }

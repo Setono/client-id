@@ -16,7 +16,7 @@ final class GeneratedClientIdProvider implements ClientIdProviderInterface
         $this->clientIdGenerator = $clientIdGenerator;
     }
 
-    public function get(): ClientId
+    public function getClientId(): ClientId
     {
         return $this->clientIdGenerator->generate();
     }
