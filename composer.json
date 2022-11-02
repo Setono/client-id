@@ -20,7 +20,7 @@
     "require-dev": {
         "infection/infection": "^0.21.0",
         "phpunit/phpunit": "^9.5",
-        "psalm/plugin-phpunit": "^0.15.1",
+        "psalm/plugin-phpunit": "^0.15.1 || ^0.18.0",
         "setono/code-quality-pack": "^2.1",
         "symfony/http-foundation": "^4.4 || ^5.2"
     },
