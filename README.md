@@ -1,7 +1,6 @@
 # Implementation of Setono Client Id contracts
 
 [![Latest Version][ico-version]][link-packagist]
-[![Latest Unstable Version][ico-unstable-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Build Status][ico-github-actions]][link-github-actions]
 [![Code Coverage][ico-code-coverage]][link-code-coverage]
@@ -18,7 +17,6 @@ $ composer require setono/client-id
 See the [tests directory](tests).
 
 [ico-version]: https://poser.pugx.org/setono/client-id/v/stable
-[ico-unstable-version]: https://poser.pugx.org/setono/client-id/v/unstable
 [ico-license]: https://poser.pugx.org/setono/client-id/license
 [ico-github-actions]: https://github.com/Setono/client-id/workflows/build/badge.svg
 [ico-code-coverage]: https://codecov.io/gh/Setono/client-id/branch/master/graph/badge.svg
