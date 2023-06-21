@@ -18,7 +18,7 @@ final class SymfonyCookieReader implements CookieReaderInterface
 
     public function getValue(string $name): ?string
     {
-        $request = $this->requestStack->getMasterRequest();
+        $request = $this->requestStack->getMainRequest();
         if (null === $request) {
             return null;
         }

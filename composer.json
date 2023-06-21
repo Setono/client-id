@@ -18,18 +18,18 @@
         "setono/client-id-implementation": "1.0"
     },
     "require-dev": {
-        "infection/infection": "^0.21.0",
+        "infection/infection": "^0.21",
         "phpunit/phpunit": "^9.5",
         "psalm/plugin-phpunit": "^0.15.1",
-        "setono/code-quality-pack": "^2.1",
-        "symfony/http-foundation": "^4.4 || ^5.2"
+        "setono/code-quality-pack": "^2.4",
+        "symfony/http-foundation": "^5.4 || ^6.0"
     },
     "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": false
         }
     },
     "autoload": {
