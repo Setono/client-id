@@ -1,8 +1,8 @@
 {
     "name": "setono/client-id",
-    "type": "library",
     "description": "Implementation of the setono/client-id-contracts",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Joachim Løvgaard",
@@ -14,9 +14,6 @@
         "setono/client-id-contracts": "^0.2",
         "symfony/uid": "^5.4 || ^6.0"
     },
-    "provide": {
-        "setono/client-id-implementation": "1.0"
-    },
     "require-dev": {
         "infection/infection": "^0.21",
         "phpunit/phpunit": "^9.5",
@@ -24,14 +21,10 @@
         "setono/code-quality-pack": "^2.4",
         "symfony/http-foundation": "^5.4 || ^6.0"
     },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": false,
-            "ergebnis/composer-normalize": true,
-            "infection/extension-installer": false
-        }
+    "provide": {
+        "setono/client-id-implementation": "1.0"
     },
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Setono\\ClientId\\": "src/"
@@ -42,7 +35,14 @@
             "Setono\\ClientId\\": "tests/"
         }
     },
-    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": false
+        },
+        "sort-packages": true
+    },
     "scripts": {
         "analyse": "psalm",
         "check-style": "ecs check",
